@@ -57,7 +57,8 @@ class DocuSignCore
                         $templateRole = new  DocuSign\eSign\Model\TemplateRole();
                         $templateRole->setEmail($c_email);
                         $templateRole->setName($c_name);
-                        $templateRole->setRoleName("developer");
+                        $templateRole->setRoleName("Signer");
+                        $templateRole->setClientUserId("1234");
 
                         // instantiate a new envelope object and configure settings
                         $envelop_definition = new DocuSign\eSign\Model\EnvelopeDefinition();
@@ -81,7 +82,7 @@ class DocuSignCore
                             $recipient_view_request->setReturnUrl(home_url() . $var['returnURL']);
                             $recipient_view_request->setUserName($c_name);
                             $recipient_view_request->setEmail($c_email);
-                            // $recipient_view_request->setClientUserId();
+                            $recipient_view_request->setClientUserId("1234");
                             $recipient_view_request->setAuthenticationMethod("email");
                             $signingView = $envelopeApi->createRecipientView($accountId, $envelop_summary->getEnvelopeId(), $recipient_view_request);
                             // print_r($signingView);?>
