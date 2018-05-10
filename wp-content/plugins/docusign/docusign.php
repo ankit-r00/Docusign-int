@@ -35,23 +35,9 @@ class DocuSign
             '',
             plugins_url('docusign/images/icon.png')
         );
-        // $this->signatureRequest();
     }
 
-    /**
-     * Main functions that redirect the user to e-Sign
-     */
-    // function signatureRequest()
-    // {
-    //     $fieldValues = $this->getOptionValues();
-    //     $DocuSignCore = new DocuSignCore();
-    //     $DocuSignCore->withinApp($fieldValues);
-    // }
-    //
-    // /**
-    //  * Retrieves all the form field values
-    //  * @return mixed|void
-    //  */
+   
     function getOptionValues()
     {
         $docuSignValues = get_option('docuSign');
