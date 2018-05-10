@@ -68,9 +68,7 @@ include( plugin_basename( '/terms.php' ) );
 
 function docusign_scripts() {
     wp_deregister_script( 'jquery-core' );
-  // wp_enqueue_style( 'docusign-cdn', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
     wp_register_script( 'jquery-core', "https://code.jquery.com/jquery-3.1.1.min.js", array(), '3.1.1' );
-  // wp_enqueue_script( 'docusign-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
 //
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
     wp_enqueue_script( 'comment-reply' );
