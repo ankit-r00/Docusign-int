@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) { //check if form was submitted
     $host = $_POST['host'];
     $emailSub = $_POST['emailSub'];
     $templateID = $_POST['templateID'];
+    $recep_role = $_POST['role'];
     $returnURL = $_POST['returnURL'];
     $docuSign['username'] = $username;
     $docuSign['password'] = $password;
@@ -16,6 +17,7 @@ if (isset($_POST['submit'])) { //check if form was submitted
     $docuSign['host'] = $host;
     $docuSign['emailSub'] = $emailSub;
     $docuSign['templateID'] = $templateID;
+    $docuSign['role'] = $recep_role;
     $docuSign['returnURL'] = $returnURL;
     if (!$fieldValues)
         add_option('docuSign', $docuSign, '', 'yes');
@@ -89,6 +91,19 @@ if (isset($_POST['submit'])) { //check if form was submitted
                     <input name="templateID" type="text" id="templateID"
                            value="<?php print(isset($templateID) ? $templateID : $fieldValues['templateID']); ?>"
                            size="40" class="regular-text" required/>
+                </td>
+            </tr>
+            <tr valign="top">
+                <th scope="row">
+                    <label for="recipientrole"><?php esc_html_e('Recipient Role', 'docusign'); ?></label>
+                </th>
+                <td>
+                    <input name="role" type="text" id="role"
+                           value="<?php print(isset($role) ? $role : $fieldValues['role']); ?>"
+                           size="40" class="regular-text"/>
+                </td>
+                <td>
+                  <h6>*Recipient role would be same as recipient role of selected template in your DocuSign account.</h6>
                 </td>
             </tr>
             <tr valign="top">

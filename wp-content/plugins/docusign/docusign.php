@@ -1,10 +1,12 @@
 <?php
-/*
-Plugin Name: DocuSign
-Version: 1.0.0
-Author: <a href="http://rubicoIT.com">ITHands</a>
-Description: Integrate DocuSign with your site. Gives the capability so that you can call the DocuSign template and show it on your site and accept/reject it.
-*/
+    /*
+        Plugin Name: DocuSign Integration
+        Description: Integrate DocuSign with your site. Gives the capability so that you can call the DocuSign template and show it on your site and accept/reject it.
+        Author: ITHands
+        Version: 1.0.0
+        Author URI: https://www.ithands.com
+    */
+
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
